@@ -1,0 +1,72 @@
+[
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "<Unknown>",
+        "id": 3526,
+        "numeric": 0,
+        "label": "Unknown"
+    },
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "1. Basic research (principles postulated and observed but no experimental proof available)",
+        "id": 3527,
+        "numeric": 1,
+        "label": "BasicResearch"
+    },
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "2. Technology formulation (concept and application have been formulated)",
+        "id": 3528,
+        "numeric": 2,
+        "label": "TechnologyFormulation"
+    },
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "3. Applied research (first laboratory tests completed; proof of concept)",
+        "id": 3529,
+        "numeric": 3,
+        "label": "AppliedResearch"
+    },
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "4. Small scale prototype (built in a laboratory environment)",
+        "id": 3530,
+        "numeric": 4,
+        "label": "SmallScalePrototype"
+    },
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "5. Large scale prototype (tested in intended environment)",
+        "id": 3531,
+        "numeric": 5,
+        "label": "LargeScalePrototype"
+    },
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "6. Prototype system (tested in intended environment close to expected performance)",
+        "id": 3532,
+        "numeric": 6,
+        "label": "SystemTestedPrototype"
+    },
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "7. Demonstration system (operating in operational environment at pre-commercial scale)",
+        "id": 3533,
+        "numeric": 7,
+        "label": "DemoSystem"
+    },
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "8. Initial commercial application (manufacturing issues solved)",
+        "id": 3534,
+        "numeric": 8,
+        "label": "FirstCommercialSystem"
+    },
+    {
+        "category": "OptionReadinessLevelsSoftware",
+        "alphanumeric": "9. Full commercial application (technology available for consumers)",
+        "id": 3535,
+        "numeric": 9,
+        "label": "FullCommercialApplication"
+    }
+]

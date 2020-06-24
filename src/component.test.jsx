@@ -7,8 +7,17 @@ import ReactDOM from "react-dom";
 import { observable, computed } from "mobx";
 import { observer } from "mobx-react";
 
+import Tree from "./Components/Tree";
+
+import Associations from "./TestData/Associations.json";
+import Options from "./TestData/Options.json";
+
 @observer
 class Component extends React.Component {
+  childComponents = [];
+  associations = Associations;
+  options = Options;
+
   constructor(props) {
     super(props);
   }
@@ -16,8 +25,24 @@ class Component extends React.Component {
   render() {
     console.log("Component.render");
     return (
-      <div>Formual1</div>
+      <div>
+        <div>Formula1</div>
+        <Tree
+          data={this.associations}
+          onSelect={this.onSelect.bind(this)} 
+          mappingLabel="name"
+          mappingValue={["value","type"]}
+          selectOnlyLeaf={true}
+          showOnlySearchedNodes={true}
+          defaultExpanded={['.','.']}
+          ref={(childComponent) => { this.childComponents.push(childComponent); }}
+        />
+      </div>
     );
+  }
+
+  onSelect(data) {
+    console.log(JSON.stringify(data));
   }
 }
 

@@ -1,0 +1,90 @@
+{
+    "name": "Associations",
+    "value": null,
+    "children": [
+        {
+            "name": "Platforms",
+            "value": null,
+            "type": 9,
+            "children": [
+                {
+                    "type": 9,
+                    "name": "Brain Simulation Platform",
+                    "value": 2
+                },
+                {
+                    "type": 9,
+                    "name": "High Performance Analytics and Computing Platform",
+                    "value": 3
+                },
+                {
+                    "type": 9,
+                    "name": "Medical Informatics Platform",
+                    "value": 4
+                },
+                {
+                    "type": 9,
+                    "name": "Neuroinformatics Platform",
+                    "value": 1
+                },
+                {
+                    "type": 9,
+                    "name": "Neuromorphic Computing Platform",
+                    "value": 5
+                },
+                {
+                    "type": 9,
+                    "name": "Neurorobotics Platform",
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "name": "Website Categories",
+            "value": null,
+            "type": 16,
+            "children": [
+                {
+                    "type": 16,
+                    "name": "Brain Simulation",
+                    "value": 2
+                },
+                {
+                    "type": 16,
+                    "name": "Explore the Brain",
+                    "value": 1
+                },
+                {
+                    "type": 16,
+                    "name": "Massive Computing",
+                    "value": 7
+                },
+                {
+                    "type": 16,
+                    "name": "Medicine",
+                    "value": 5
+                },
+                {
+                    "type": 16,
+                    "name": "Robots",
+                    "value": 6
+                },
+                {
+                    "type": 16,
+                    "name": "Silicon Brains",
+                    "value": 3
+                },
+                {
+                    "type": 16,
+                    "name": "Societal, Ethical, Reflective",
+                    "value": 8
+                },
+                {
+                    "type": 16,
+                    "name": "Understanding Cognition",
+                    "value": 4
+                }
+            ]
+        }
+    ]
+}
