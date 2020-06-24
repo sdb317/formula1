@@ -4,7 +4,9 @@
   "description": "A form library based on react-bootstrap v4",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir lib --ignore=src/tests.*",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "forms",
@@ -14,6 +16,7 @@
   "author": "Simon D. Bell",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-class-properties": "^6.24.1",

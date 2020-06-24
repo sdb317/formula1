@@ -9,14 +9,14 @@ import { observer } from "mobx-react";
 
 import Tree from "./Components/Tree";
 
-import Associations from "./TestData/Associations.json";
-import Options from "./TestData/Options.json";
+import TestTree from "./tests.tree.json";
+import TestList from "./tests.list.json";
 
 @observer
 class Component extends React.Component {
   childComponents = [];
-  associations = Associations;
-  options = Options;
+  tree = TestTree;
+  list = TestList;
 
   constructor(props) {
     super(props);
@@ -28,7 +28,7 @@ class Component extends React.Component {
       <div>
         <div>Formula1</div>
         <Tree
-          data={this.associations}
+          data={this.tree}
           onSelect={this.onSelect.bind(this)} 
           mappingLabel="name"
           mappingValue={["value","type"]}
