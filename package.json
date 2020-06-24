@@ -1,6 +1,6 @@
 {
   "name": "formula1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A form library based on react-bootstrap v4",
   "main": "index.js",
   "scripts": {
