@@ -5,11 +5,12 @@
 // Imports : 
 
 import React from "react";
-import {Form, InputGroup, Button} from "react-bootstrap";
+import {FormControl, FormGroup, Glyphicon, InputGroup, Button, Label} from "react-bootstrap"; // Bootstrap 3
+// import {Form, InputGroup, Button} from "react-bootstrap"; // Bootstrap 4
 import { isString } from "lodash";
 
 import BaseComponent from "./BaseComponent";
-import Glyphicon from "./Glyphicon";
+// import Glyphicon from "./Glyphicon"; // Not included in Bootstrap 4
 import TreeNode from "./TreeNode";
 
 /**
@@ -49,6 +50,23 @@ class Tree extends BaseComponent {
 
     return (
       <div className="formula1-tree">
+        <FormGroup controlId="Tree Node Search" className="formula1-tree-search">
+          <InputGroup>
+            <InputGroup.Addon>
+              <Glyphicon glyph="search" />
+            </InputGroup.Addon>
+            <FormControl type="text"
+              className={"formula1-tree-search-input"}
+              placeholder="Search"
+              onChange={this.handleChange.bind(this)}
+              value={this.state.queryInput}/>
+            <InputGroup.Button>
+              <Button onClick={this.reset.bind(this)}><Glyphicon glyph="remove" /></Button>
+            </InputGroup.Button>
+          </InputGroup>
+        </FormGroup>
+
+        {/* Bootstrap 4
         <Form.Group controlId="Tree Node Search" className="formula1-tree-search">
           <InputGroup>
             <InputGroup.Prepend>
@@ -64,6 +82,7 @@ class Tree extends BaseComponent {
             </InputGroup.Append>
           </InputGroup>
         </Form.Group>
+        */}
 
         <TreeNode
           data={this.props.data}

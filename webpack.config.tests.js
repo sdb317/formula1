@@ -6,12 +6,12 @@ var target = "tests";
 module.exports = Object.assign({}, webpackConfig, {
   entry: [
     "babel-polyfill",
-    "./src/" + target // The is the entry point. The extensions will be specified later in the `resolve` section.
+    "./src/Tests/" + target // The is the entry point. The extensions will be specified later in the `resolve` section.
   ],
 
   output: {
     path: __dirname,
-    filename: "src/" + target + ".bundle.js" // This is where the compiled bundle will be stored.
+    filename: "src/Tests/" + target + ".bundle.js" // This is where the compiled bundle will be stored.
   },
 
   devtool: "source-map",
@@ -27,4 +27,4 @@ module.exports = Object.assign({}, webpackConfig, {
   }
 });
 
-// .\node_modules\.bin\webpack-dev-server --config webpack.config.tests.js
+// .\node_modules\.bin\webpack-dev-server --config webpack.config.tests.js --port 8082

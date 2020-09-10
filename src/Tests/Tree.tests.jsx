@@ -1,20 +1,23 @@
-/*global QUnit */
+/* global QUnit */
 /* eslint-disable no-console */
 
 import React from "react";
 import ReactDOM from "react-dom";
+import jss, { createStyleSheet } from "jss";
+import preset from "jss-preset-default";
 
 import { observable, computed } from "mobx";
 import { observer } from "mobx-react";
 
-import Tree from "./Components/Tree";
+import Tree from "../Components/Tree";
 
 import TestTree from "./tests.tree.json";
 import TestList from "./tests.list.json";
 
+
 @observer
 class Component extends React.Component {
-  childComponents = [];
+  ref;
   tree = TestTree;
   list = TestList;
 
@@ -26,7 +29,6 @@ class Component extends React.Component {
     console.log("Component.render");
     return (
       <div>
-        <div>Formula1</div>
         <Tree
           data={this.tree}
           onSelect={this.onSelect.bind(this)} 
@@ -35,7 +37,7 @@ class Component extends React.Component {
           selectOnlyLeaf={true}
           showOnlySearchedNodes={true}
           defaultExpanded={['.','.']}
-          ref={(childComponent) => { this.childComponents.push(childComponent); }}
+          ref={(childComponent) => { this.ref = childComponent; }}
         />
       </div>
     );
@@ -66,7 +68,7 @@ QUnit.module("Test", function (hooks) {
 
   QUnit.test("rendered", function (assert) {
     console.log("QUnit." + assert.test.testName);
-    assert.ok(this.component.childComponents.length > 0, "passed");
+    assert.ok(typeof this.component.ref == "object", "passed");
   });
 
   // hooks.after(function (assert) { // Not getting called here for some reason

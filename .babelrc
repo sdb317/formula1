@@ -10,7 +10,7 @@
             "transform-imports",
             {
                 "react-bootstrap": {
-                    "transform": "react-bootstrap/${member}",
+                    "transform": "react-bootstrap/lib/${member}",
                     "preventFullImport": true
                 },
                 "lodash": {

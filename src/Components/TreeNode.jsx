@@ -6,10 +6,10 @@
 
 import React from "react";
 import injectStyles from "react-jss";
-import {Button, Badge} from "react-bootstrap";
+import { Badge, Button, Glyphicon, Label } from "react-bootstrap";
 import { intersection, find } from "lodash";
 
-import Glyphicon from "./Glyphicon";
+// import Glyphicon from "./Glyphicon"; // Not included in Bootstrap 4
 
 let treeNodeStyles = {
   node: {
@@ -117,18 +117,31 @@ class TreeNode extends React.Component {
     return (
       <li className={`${classes.node} ${hideThisNode && "hidden"} formula1-tree-node`}>
         {children != undefined ?
+          <Button className={"formula1-tree-node-expand"} bsStyle={"link"} bsSize={"xsmall"} onClick={this.toggle.bind(this)}>
+            <Glyphicon glyph={this.state.expand?"minus":"plus"}/>
+          </Button>
+          /* Bootstrap 4
           <Button variant="light" className={"formula1-tree-node-expand"} size="sm" onClick={this.toggle.bind(this)}>
             <Glyphicon glyph={this.state.expand ? "minus" : "plus"} />
           </Button>
+          */
           :
           <span className={classes.leafPlaceHolder} />
         }
+        <a className={"formula1-tree-node-selector"} onClick={this.handleClickSelect.bind(this)} style={{ cursor: "pointer", textDecoration: "none", color: "inherit" }}>
+          {isSelected?
+            <Label bsStyle={"success"} className={classes.labelSelected}><Glyphicon glyph={"ok"}/></Label>
+            :null}
+          {label}
+        </a>
+        {/* Bootstrap 4
         <a className={"formula1-tree-node-selector"} onClick={this.handleClickSelect.bind(this)} style={{ cursor: "pointer", textDecoration: "none", color: "inherit" }}>
           {isSelected ?
             <Badge bsStyle={"success"} className={classes.labelSelected}><Glyphicon glyph={"ok"} /></Badge>
             : null}
           {label}
         </a>
+        */}
 
         {(children != undefined && this.state.expand) &&
           <ul className={`${classes.childrenList} formula1-tree-node-children`}>{children}</ul>

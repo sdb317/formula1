@@ -1,2 +1,2 @@
-# Formual1
-A form library based on react-bootstrap v4
+# Formula1
+A form library based on react-bootstrap v3

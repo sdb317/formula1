@@ -1,0 +1,8 @@
+src
+.babelrc
+.eslintignore
+.eslintrc.json
+bootstrap.*
+tests.html
+webpack.config.js
+webpack.config.tests.js
