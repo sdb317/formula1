@@ -14,7 +14,7 @@
     "react-bootstrap"
   ],
   "author": "Simon D. Bell",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
