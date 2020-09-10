@@ -1,11 +1,11 @@
 {
   "name": "formula1",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A form library based on react-bootstrap v3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir lib --ignore=src/tests.*",
+    "build": "babel src --out-dir lib --ignore=src/Tests",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
